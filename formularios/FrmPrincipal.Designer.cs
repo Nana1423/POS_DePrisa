@@ -1,6 +1,6 @@
 ﻿namespace POS_DePrisa
 {
-    partial class Form1
+    partial class FrmPrincipal
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -28,10 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // FrmPrincipal
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Name = "FrmPrincipal";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.FrmPrincipal_Load);
+            this.ResumeLayout(false);
+
         }
 
         #endregion

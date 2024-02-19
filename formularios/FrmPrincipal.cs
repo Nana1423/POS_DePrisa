@@ -1,4 +1,5 @@
-﻿using System;
+﻿using POS_DePrisa.dao;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,11 +11,21 @@ using System.Windows.Forms;
 
 namespace POS_DePrisa
 {
-    public partial class Form1 : Form
+    public partial class FrmPrincipal : Form
     {
-        public Form1()
+        public FrmPrincipal()
         {
             InitializeComponent();
+        }
+
+        private void FrmPrincipal_Load(object sender, EventArgs e)
+        {
+            cargarDataGrid();
+        }
+
+        private void cargarDataGrid()
+        {
+       
         }
     }
 }
