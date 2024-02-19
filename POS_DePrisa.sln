@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33424.131
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "POS_DePrisa", "POS_DePrisa.csproj", "{AFFA6C93-654D-4347-8E55-CC9F17461A6D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AFFA6C93-654D-4347-8E55-CC9F17461A6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFFA6C93-654D-4347-8E55-CC9F17461A6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFFA6C93-654D-4347-8E55-CC9F17461A6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFFA6C93-654D-4347-8E55-CC9F17461A6D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D538309B-B027-4EB7-B9D7-ED65AAAFA9A8}
+	EndGlobalSection
+EndGlobal
