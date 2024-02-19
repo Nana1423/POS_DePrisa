@@ -53,7 +53,14 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DBDePrisaDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="entidades\ArqueoCaja.cs" />
+    <Compile Include="entidades\Categoria.cs" />
+    <Compile Include="entidades\DetalleFactura.cs" />
+    <Compile Include="entidades\DetalleKit.cs" />
+    <Compile Include="entidades\Factura.cs" />
     <Compile Include="entidades\Producto.cs" />
+    <Compile Include="entidades\Rol.cs" />
+    <Compile Include="entidades\Usuario.cs" />
     <Compile Include="formularios\FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
