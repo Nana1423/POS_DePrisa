@@ -12,7 +12,7 @@ namespace POS_DePrisa.entidades
         // * Definicion de atributos *
         public int IdUsuario { get; set; }
         public string Nombre { get; set; }
-        public string NombreApellido { get; set; }
+        public string NombreUsuario { get; set; }
         public string Pw { get; set; }
         public DateTime FechaCreacion { get; set; }
         public int Estado { get; set; }
@@ -25,11 +25,11 @@ namespace POS_DePrisa.entidades
         }
 
         // Constructor con parametros
-        public Usuario(int idUsuario, string nombre, string nombreApellido, string pw, DateTime fechaCreacion, int estado, int idRol)
+        public Usuario(int idUsuario, string nombre, string nombreUsuario, string pw, DateTime fechaCreacion, int estado, int idRol)
         {
             IdUsuario = idUsuario;
             Nombre = nombre;
-            NombreApellido = nombreApellido;
+            NombreUsuario = nombreUsuario;
             Pw = pw;
             FechaCreacion = fechaCreacion;
             Estado = estado;

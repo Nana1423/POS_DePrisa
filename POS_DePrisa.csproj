@@ -47,6 +47,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="dao\DArqueoCaja.cs" />
+    <Compile Include="dao\DCategoria.cs" />
+    <Compile Include="dao\DDetalleFactura.cs" />
+    <Compile Include="dao\DDetalleKit.cs" />
     <Compile Include="dao\DProducto.cs" />
     <Compile Include="DBDePrisaDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
