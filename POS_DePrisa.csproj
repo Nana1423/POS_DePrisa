@@ -51,7 +51,10 @@
     <Compile Include="dao\DCategoria.cs" />
     <Compile Include="dao\DDetalleFactura.cs" />
     <Compile Include="dao\DDetalleKit.cs" />
+    <Compile Include="dao\DFactura.cs" />
     <Compile Include="dao\DProducto.cs" />
+    <Compile Include="dao\DRol.cs" />
+    <Compile Include="dao\DUsuario.cs" />
     <Compile Include="DBDePrisaDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
