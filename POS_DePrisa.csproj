@@ -68,6 +68,18 @@
     <Compile Include="entidades\Producto.cs" />
     <Compile Include="entidades\Rol.cs" />
     <Compile Include="entidades\Usuario.cs" />
+    <Compile Include="formularios\FrmAperturaCaja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\FrmAperturaCaja.Designer.cs">
+      <DependentUpon>FrmAperturaCaja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\FrmCierreTurno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\FrmCierreTurno.Designer.cs">
+      <DependentUpon>FrmCierreTurno.cs</DependentUpon>
+    </Compile>
     <Compile Include="formularios\FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,6 +106,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="formularios\FrmAperturaCaja.resx">
+      <DependentUpon>FrmAperturaCaja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\FrmCierreTurno.resx">
+      <DependentUpon>FrmCierreTurno.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="formularios\FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -153,6 +171,7 @@
     <Content Include="imagenes\iconFactura32.png" />
     <Content Include="imagenes\iconOficina32.png" />
     <Content Include="imagenes\iconConfiguracion32.png" />
+    <None Include="imagenes\iconOk32.png" />
     <Content Include="imagenes\iconPdf32.png" />
     <Content Include="imagenes\iconUsuario32.png" />
     <Content Include="imagenes\Logo DePrisa %281%29.png" />
