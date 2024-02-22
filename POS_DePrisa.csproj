@@ -50,6 +50,9 @@
     <Compile Include="customControls\GradientPanel.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="customControls\PictureBoxRound.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="customControls\RoundedButton.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -177,6 +180,7 @@
     <Content Include="imagenes\iconFactura32.png" />
     <Content Include="imagenes\iconOficina32.png" />
     <Content Include="imagenes\iconConfiguracion32.png" />
+    <None Include="imagenes\profilePicExample.jpg" />
     <None Include="imagenes\iconOk32.png" />
     <Content Include="imagenes\iconPdf32.png" />
     <Content Include="imagenes\iconAdd32.png" />
