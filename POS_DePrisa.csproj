@@ -80,6 +80,18 @@
     <Compile Include="formularios\FrmPrincipal.Designer.cs">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="formularios\FrmProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\FrmProducto.Designer.cs">
+      <DependentUpon>FrmProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\FrmUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\FrmUsuario.Designer.cs">
+      <DependentUpon>FrmUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="formularios\FrmLogin.resx">
@@ -87,6 +99,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="formularios\FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\FrmProducto.resx">
+      <DependentUpon>FrmProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\FrmUsuario.resx">
+      <DependentUpon>FrmUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -131,8 +149,16 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="imagenes\Elipses.png" />
+    <Content Include="imagenes\iconClose32.png" />
+    <Content Include="imagenes\iconFactura32.png" />
+    <Content Include="imagenes\iconOficina32.png" />
+    <Content Include="imagenes\iconConfiguracion32.png" />
+    <Content Include="imagenes\iconPdf32.png" />
+    <Content Include="imagenes\iconUsuario32.png" />
     <Content Include="imagenes\Logo DePrisa %281%29.png" />
     <Content Include="imagenes\Logo DePrisa.svg" />
+    <Content Include="imagenes\logoPrisaBlue.jpg" />
+    <Content Include="imagenes\logoPrisaBlueHorizontal.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
