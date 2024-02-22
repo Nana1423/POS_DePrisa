@@ -47,6 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="customControls\GradientPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="customControls\RoundedButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="dao\DArqueoCaja.cs" />
     <Compile Include="dao\DCategoria.cs" />
     <Compile Include="dao\DDetalleFactura.cs" />
