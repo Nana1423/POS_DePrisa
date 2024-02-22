@@ -21,12 +21,20 @@ namespace POS_DePrisa
 
         private void FrmPrincipal_Load(object sender, EventArgs e)
         {
+            MaxFormSize();
             cargarDataGrid();
         }
 
         private void cargarDataGrid()
         {
        
+        }
+
+        private void MaxFormSize()
+        {
+            Left = Top = 0;
+            Width = Screen.PrimaryScreen.WorkingArea.Width;
+            Height = Screen.PrimaryScreen.WorkingArea.Height;
         }
 
         private void tableLayoutBackGround_Paint(object sender, PaintEventArgs e)
