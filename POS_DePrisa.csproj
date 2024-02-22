@@ -179,6 +179,7 @@
     <Content Include="imagenes\iconConfiguracion32.png" />
     <None Include="imagenes\iconOk32.png" />
     <Content Include="imagenes\iconPdf32.png" />
+    <Content Include="imagenes\iconAdd32.png" />
     <Content Include="imagenes\iconUsuario32.png" />
     <Content Include="imagenes\Logo DePrisa %281%29.png" />
     <Content Include="imagenes\Logo DePrisa.svg" />
