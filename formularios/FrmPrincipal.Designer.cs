@@ -30,23 +30,24 @@
         {
             this.tableLayoutBackGround = new System.Windows.Forms.TableLayoutPanel();
             this.panelSuperior = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelShowData = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.flowLayoutMenu = new System.Windows.Forms.FlowLayoutPanel();
-            this.panelExitButton = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnFacturas = new System.Windows.Forms.Button();
             this.btnProductos = new System.Windows.Forms.Button();
             this.btnReportes = new System.Windows.Forms.Button();
             this.btnUsuarios = new System.Windows.Forms.Button();
             this.btnConfiguracion = new System.Windows.Forms.Button();
-            this.btnSalir = new System.Windows.Forms.Button();
+            this.panelExitButton = new System.Windows.Forms.Panel();
+            this.btnSalir = new POS_DePrisa.customControls.RoundedButton();
+            this.roundedButton1 = new POS_DePrisa.customControls.RoundedButton();
             this.tableLayoutBackGround.SuspendLayout();
             this.panelSuperior.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.flowLayoutMenu.SuspendLayout();
             this.panelExitButton.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutBackGround
@@ -78,6 +79,16 @@
             this.panelSuperior.Name = "panelSuperior";
             this.panelSuperior.Size = new System.Drawing.Size(1281, 80);
             this.panelSuperior.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::POS_DePrisa.Properties.Resources.logoPrisaBlueHorizontal;
+            this.pictureBox1.Location = new System.Drawing.Point(10, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(183, 77);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
             // 
             // panelShowData
             // 
@@ -113,6 +124,7 @@
             this.flowLayoutMenu.Controls.Add(this.btnReportes);
             this.flowLayoutMenu.Controls.Add(this.btnUsuarios);
             this.flowLayoutMenu.Controls.Add(this.btnConfiguracion);
+            this.flowLayoutMenu.Controls.Add(this.roundedButton1);
             this.flowLayoutMenu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutMenu.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutMenu.Margin = new System.Windows.Forms.Padding(0);
@@ -120,27 +132,6 @@
             this.flowLayoutMenu.Padding = new System.Windows.Forms.Padding(0, 12, 0, 0);
             this.flowLayoutMenu.Size = new System.Drawing.Size(1149, 64);
             this.flowLayoutMenu.TabIndex = 3;
-            // 
-            // panelExitButton
-            // 
-            this.panelExitButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelExitButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(238)))), ((int)(((byte)(243)))));
-            this.panelExitButton.Controls.Add(this.btnSalir);
-            this.panelExitButton.Location = new System.Drawing.Point(1152, 3);
-            this.panelExitButton.Name = "panelExitButton";
-            this.panelExitButton.Size = new System.Drawing.Size(120, 58);
-            this.panelExitButton.TabIndex = 4;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::POS_DePrisa.Properties.Resources.logoPrisaBlueHorizontal;
-            this.pictureBox1.Location = new System.Drawing.Point(10, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(183, 77);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
             // 
             // btnFacturas
             // 
@@ -216,21 +207,63 @@
             this.btnConfiguracion.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnConfiguracion.UseVisualStyleBackColor = true;
             // 
+            // panelExitButton
+            // 
+            this.panelExitButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelExitButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(238)))), ((int)(((byte)(243)))));
+            this.panelExitButton.Controls.Add(this.btnSalir);
+            this.panelExitButton.Location = new System.Drawing.Point(1152, 3);
+            this.panelExitButton.Name = "panelExitButton";
+            this.panelExitButton.Size = new System.Drawing.Size(120, 58);
+            this.panelExitButton.TabIndex = 4;
+            // 
             // btnSalir
             // 
             this.btnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(238)))), ((int)(((byte)(243)))));
+            this.btnSalir.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(238)))), ((int)(((byte)(243)))));
+            this.btnSalir.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnSalir.BorderRadius = 10;
+            this.btnSalir.BorderSize = 1;
+            this.btnSalir.FlatAppearance.BorderSize = 0;
+            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalir.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalir.ForeColor = System.Drawing.Color.Black;
             this.btnSalir.Image = global::POS_DePrisa.Properties.Resources.iconClose32;
             this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSalir.Location = new System.Drawing.Point(32, 12);
-            this.btnSalir.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
+            this.btnSalir.Location = new System.Drawing.Point(34, 12);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(82, 38);
+            this.btnSalir.Size = new System.Drawing.Size(80, 38);
             this.btnSalir.TabIndex = 5;
             this.btnSalir.Text = "Salir";
             this.btnSalir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSalir.UseVisualStyleBackColor = true;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click_1);
+            this.btnSalir.TextColor = System.Drawing.Color.Black;
+            this.btnSalir.UseVisualStyleBackColor = false;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click_2);
+            // 
+            // roundedButton1
+            // 
+            this.roundedButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.roundedButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(238)))), ((int)(((byte)(243)))));
+            this.roundedButton1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(238)))), ((int)(((byte)(243)))));
+            this.roundedButton1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.roundedButton1.BorderRadius = 10;
+            this.roundedButton1.BorderSize = 1;
+            this.roundedButton1.FlatAppearance.BorderSize = 0;
+            this.roundedButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundedButton1.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roundedButton1.ForeColor = System.Drawing.Color.Black;
+            this.roundedButton1.Image = global::POS_DePrisa.Properties.Resources.iconConfiguracion32;
+            this.roundedButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.roundedButton1.Location = new System.Drawing.Point(664, 15);
+            this.roundedButton1.Name = "roundedButton1";
+            this.roundedButton1.Size = new System.Drawing.Size(148, 38);
+            this.roundedButton1.TabIndex = 6;
+            this.roundedButton1.Text = "Configuración";
+            this.roundedButton1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.roundedButton1.TextColor = System.Drawing.Color.Black;
+            this.roundedButton1.UseVisualStyleBackColor = false;
             // 
             // FrmPrincipal
             // 
@@ -247,10 +280,10 @@
             this.Load += new System.EventHandler(this.FrmPrincipal_Load);
             this.tableLayoutBackGround.ResumeLayout(false);
             this.panelSuperior.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.flowLayoutMenu.ResumeLayout(false);
             this.panelExitButton.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -268,8 +301,9 @@
         private System.Windows.Forms.Button btnReportes;
         private System.Windows.Forms.Button btnUsuarios;
         private System.Windows.Forms.Button btnConfiguracion;
-        private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Panel panelExitButton;
+        private customControls.RoundedButton btnSalir;
+        private customControls.RoundedButton roundedButton1;
     }
 }
 

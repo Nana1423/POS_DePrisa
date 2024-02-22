@@ -70,5 +70,10 @@ namespace POS_DePrisa
         {
             showForm(new FrmUsuario());
         }
+
+        private void btnSalir_Click_2(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
