@@ -1,4 +1,5 @@
 ﻿using POS_DePrisa.dao;
+using POS_DePrisa.formularios;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -26,6 +27,48 @@ namespace POS_DePrisa
         private void cargarDataGrid()
         {
        
+        }
+
+        private void tableLayoutBackGround_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnSalir_Click_1(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnFacturas_Click(object sender, EventArgs e)
+        {
+            //utiliza el panelshowData para cargarFrmProducto
+            showForm(new FrmProducto());
+
+        }
+
+        private void showForm(Form form)
+        {
+            panelShowData.Controls.Clear();
+            form.FormBorderStyle = FormBorderStyle.None;
+            form.TopLevel = false;
+            form.WindowState = FormWindowState.Maximized;
+            panelShowData.Controls.Add(form);
+            form.Show();
+        }
+
+        private void btnProductos_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnUsuarios_Click(object sender, EventArgs e)
+        {
+            showForm(new FrmUsuario());
         }
     }
 }

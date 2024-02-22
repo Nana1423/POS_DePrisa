@@ -19,14 +19,9 @@ namespace POS_DePrisa.formularios
 
         private void FrmLogin_Load(object sender, EventArgs e)
         {
-            Image img = pbElipse.Image;
-            img.RotateFlip(RotateFlipType.Rotate180FlipNone);
-            pbElipse.Image = img;
 
-            //redondear esquinas de los textbox
-           
-            
         }
+
 
         private void txtUser_Click(object sender, EventArgs e)
         {
@@ -45,21 +40,17 @@ namespace POS_DePrisa.formularios
             }
         }
 
-        private void btnSalir_MouseHover(object sender, EventArgs e)
-        {
-            //cambia el backcolor a rojo
-            btnSalir.BackColor = Color.Red;
-        }
-
-        private void btnSalir_MouseLeave(object sender, EventArgs e)
-        {
-            //regresa el color al color del contenedor padre
-            btnSalir.BackColor = Color.FromArgb(19, 18, 21);
-        }
-
+       
         private void btnSalir_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            var frm = new FrmPrincipal();
+            frm.Show();
+            this.Hide();
         }
     }
 }
