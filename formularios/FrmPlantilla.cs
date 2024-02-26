@@ -21,7 +21,6 @@ namespace POS_DePrisa.formularios
 
         private void showForm(Form form)
         {
-            panelShowData.Controls.Clear();
             form.FormBorderStyle = FormBorderStyle.None;
             form.TopLevel = false;
             form.WindowState = FormWindowState.Maximized;
@@ -32,6 +31,64 @@ namespace POS_DePrisa.formularios
         private void roundedButton1_Click(object sender, EventArgs e)
         {
             showForm(new FrmGuardarProducto());
+        }
+
+        private void btnOcultar_Click(object sender, EventArgs e)
+        {
+            //oculta la segunda fila del tablelayout y haz visible el toolstrip
+            //tableLayoutBackGround.RowStyles[1].SizeType =SizeType.Absolute;
+            //tableLayoutBackGround.RowStyles[1].Height = 0;
+
+
+            //toolStripContainer1.Visible = true;
+            cambiarVisibilidadBotones(1);
+            tableLayoutBackGround.RowStyles[1].Height = toolStrip2.Height;
+            
+            
+
+        }
+
+        private void cambiarVisibilidadBotones(int estado) 
+        {
+            if (estado == 1)
+            {
+                roundedButton1.Visible = false;
+                roundedButton2.Visible = false;
+                btnOcultar.Visible = false;
+                toolStrip2.Visible = true;
+            }
+            else
+            {
+                roundedButton1.Visible = true;
+                roundedButton2.Visible = true;
+                btnOcultar.Visible = true;
+                toolStrip2.Visible = false;
+            }
+            
+        }
+
+        private void toolStripButton4_Click(object sender, EventArgs e)
+        {
+       
+   
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void toolStripButton8_Click(object sender, EventArgs e)
+        {
+            tableLayoutBackGround.RowStyles[1].SizeType = SizeType.Absolute;
+            tableLayoutBackGround.RowStyles[1].Height = 46;
+            cambiarVisibilidadBotones(0);
+
+        }
+
+        private void toolStripButton5_Click(object sender, EventArgs e)
+        {
+            showForm(new FrmGuardarProducto());
+
         }
     }
 
