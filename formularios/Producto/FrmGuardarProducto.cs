@@ -8,15 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace POS_DePrisa.formularios
+namespace POS_DePrisa.formularios.Producto
 {
-    public partial class FrmProducto : Form
+    public partial class FrmGuardarProducto : Form
     {
-        public FrmProducto()
+        public FrmGuardarProducto()
         {
             InitializeComponent();
         }
-
-      
     }
 }

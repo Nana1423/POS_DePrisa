@@ -95,6 +95,12 @@
     <Compile Include="formularios\FrmLogin.Designer.cs">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="formularios\FrmPlantilla.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\FrmPlantilla.Designer.cs">
+      <DependentUpon>FrmPlantilla.cs</DependentUpon>
+    </Compile>
     <Compile Include="formularios\FrmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,6 +119,12 @@
     <Compile Include="formularios\FrmUsuario.Designer.cs">
       <DependentUpon>FrmUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="formularios\Producto\FrmGuardarProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\Producto\FrmGuardarProducto.Designer.cs">
+      <DependentUpon>FrmGuardarProducto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="formularios\FrmAperturaCaja.resx">
@@ -124,6 +136,9 @@
     <EmbeddedResource Include="formularios\FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="formularios\FrmPlantilla.resx">
+      <DependentUpon>FrmPlantilla.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="formularios\FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
@@ -132,6 +147,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="formularios\FrmUsuario.resx">
       <DependentUpon>FrmUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\Producto\FrmGuardarProducto.resx">
+      <DependentUpon>FrmGuardarProducto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -184,6 +202,8 @@
     <None Include="imagenes\iconOk32.png" />
     <Content Include="imagenes\iconPdf32.png" />
     <Content Include="imagenes\iconAdd32.png" />
+    <Content Include="imagenes\iconAdd16.png" />
+    <Content Include="imagenes\iconAdd28.png" />
     <Content Include="imagenes\iconUsuario32.png" />
     <Content Include="imagenes\Logo DePrisa %281%29.png" />
     <Content Include="imagenes\Logo DePrisa.svg" />
