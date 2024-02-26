@@ -1,6 +1,6 @@
 ﻿namespace POS_DePrisa.formularios
 {
-    partial class FrmProducto
+    partial class FrmPlantilla
     {
         /// <summary>
         /// Required designer variable.
@@ -60,8 +60,8 @@
             this.tableLayoutBackGround.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39F));
             this.tableLayoutBackGround.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 57F));
             this.tableLayoutBackGround.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutBackGround.Size = new System.Drawing.Size(1067, 554);
-            this.tableLayoutBackGround.TabIndex = 2;
+            this.tableLayoutBackGround.Size = new System.Drawing.Size(1732, 551);
+            this.tableLayoutBackGround.TabIndex = 1;
             // 
             // panelShowData
             // 
@@ -70,7 +70,7 @@
             this.panelShowData.Location = new System.Drawing.Point(0, 96);
             this.panelShowData.Margin = new System.Windows.Forms.Padding(0);
             this.panelShowData.Name = "panelShowData";
-            this.panelShowData.Size = new System.Drawing.Size(1732, 458);
+            this.panelShowData.Size = new System.Drawing.Size(1732, 455);
             this.panelShowData.TabIndex = 2;
             // 
             // tableLayoutPanel1
@@ -129,6 +129,7 @@
             this.roundedButton1.TextColor = System.Drawing.Color.Black;
             this.roundedButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.roundedButton1.UseVisualStyleBackColor = false;
+            this.roundedButton1.Click += new System.EventHandler(this.roundedButton1_Click);
             // 
             // roundedButton2
             // 
@@ -232,15 +233,14 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Productos";
             // 
-            // FrmProducto
+            // FrmPlantilla
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.ClientSize = new System.Drawing.Size(1732, 551);
             this.Controls.Add(this.tableLayoutBackGround);
-            this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "FrmProducto";
-            this.Text = "FrmProducto";
+            this.Name = "FrmPlantilla";
+            this.Text = "FrmPlantilla";
             this.tableLayoutBackGround.ResumeLayout(false);
             this.tableLayoutBackGround.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -258,11 +258,11 @@
         private System.Windows.Forms.Panel panelShowData;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutMenu;
+        private customControls.GradientPanel gradientPanel1;
         private customControls.RoundedButton roundedButton1;
+        private System.Windows.Forms.Label label1;
         private customControls.RoundedButton roundedButton2;
         private customControls.RoundedButton roundedButton3;
         private customControls.RoundedButton roundedButton4;
-        private customControls.GradientPanel gradientPanel1;
-        private System.Windows.Forms.Label label1;
     }
 }
