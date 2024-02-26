@@ -103,6 +103,26 @@ namespace POS_DePrisa.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap iconCategoria16 {
+            get {
+                object obj = ResourceManager.GetObject("iconCategoria16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconCategoria28 {
+            get {
+                object obj = ResourceManager.GetObject("iconCategoria28", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap iconClose32 {
             get {
                 object obj = ResourceManager.GetObject("iconClose32", resourceCulture);
@@ -126,6 +146,16 @@ namespace POS_DePrisa.Properties {
         internal static System.Drawing.Bitmap iconFactura32 {
             get {
                 object obj = ResourceManager.GetObject("iconFactura32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconOcultar28 {
+            get {
+                object obj = ResourceManager.GetObject("iconOcultar28", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
