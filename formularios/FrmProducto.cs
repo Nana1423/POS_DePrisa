@@ -1,4 +1,5 @@
-﻿using System;
+﻿using POS_DePrisa.formularios.Producto;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,6 +18,19 @@ namespace POS_DePrisa.formularios
             InitializeComponent();
         }
 
-      
+        private void showForm(Form form)
+        {
+            form.FormBorderStyle = FormBorderStyle.None;
+            form.TopLevel = false;
+            form.WindowState = FormWindowState.Maximized;
+            panelShowData.Controls.Add(form);
+            form.Show();
+        }
+
+
+        private void btnGuardarProducto_Click(object sender, EventArgs e)
+        {
+            showForm(new FrmGuardarProducto());
+        }
     }
 }
