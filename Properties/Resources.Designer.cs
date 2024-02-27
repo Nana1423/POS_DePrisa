@@ -153,6 +153,16 @@ namespace POS_DePrisa.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap iconGreenCheck28 {
+            get {
+                object obj = ResourceManager.GetObject("iconGreenCheck28", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap iconOcultar28 {
             get {
                 object obj = ResourceManager.GetObject("iconOcultar28", resourceCulture);

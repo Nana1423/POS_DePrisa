@@ -125,6 +125,8 @@
     <Compile Include="formularios\Producto\FrmGuardarProducto.Designer.cs">
       <DependentUpon>FrmGuardarProducto.cs</DependentUpon>
     </Compile>
+    <Compile Include="negocios\ProductoServices.cs" />
+    <Compile Include="negocios\ResultadoOperacion.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="formularios\FrmAperturaCaja.resx">
@@ -186,7 +188,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="negocios\" />
     <Folder Include="reportes\" />
   </ItemGroup>
   <ItemGroup>
@@ -207,6 +208,7 @@
     <Content Include="imagenes\iconOcultar28.png" />
     <Content Include="imagenes\iconCategoria16.png" />
     <Content Include="imagenes\iconCategoria28.png" />
+    <Content Include="imagenes\iconGreenCheck28.png" />
     <Content Include="imagenes\iconUsuario32.png" />
     <Content Include="imagenes\Logo DePrisa %281%29.png" />
     <Content Include="imagenes\Logo DePrisa.svg" />
