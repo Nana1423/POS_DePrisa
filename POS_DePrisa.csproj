@@ -119,11 +119,23 @@
     <Compile Include="formularios\FrmUsuario.Designer.cs">
       <DependentUpon>FrmUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="formularios\Producto\FrmCantidadDetalleKit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\Producto\FrmCantidadDetalleKit.Designer.cs">
+      <DependentUpon>FrmCantidadDetalleKit.cs</DependentUpon>
+    </Compile>
     <Compile Include="formularios\Producto\FrmGuardarProducto.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="formularios\Producto\FrmGuardarProducto.Designer.cs">
       <DependentUpon>FrmGuardarProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\Producto\FrmPrueba.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\Producto\FrmPrueba.Designer.cs">
+      <DependentUpon>FrmPrueba.cs</DependentUpon>
     </Compile>
     <Compile Include="negocios\ProductoServices.cs" />
     <Compile Include="negocios\ResultadoOperacion.cs" />
@@ -150,8 +162,14 @@
     <EmbeddedResource Include="formularios\FrmUsuario.resx">
       <DependentUpon>FrmUsuario.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="formularios\Producto\FrmCantidadDetalleKit.resx">
+      <DependentUpon>FrmCantidadDetalleKit.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="formularios\Producto\FrmGuardarProducto.resx">
       <DependentUpon>FrmGuardarProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\Producto\FrmPrueba.resx">
+      <DependentUpon>FrmPrueba.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -209,6 +227,10 @@
     <Content Include="imagenes\iconCategoria16.png" />
     <Content Include="imagenes\iconCategoria28.png" />
     <Content Include="imagenes\iconGreenCheck28.png" />
+    <Content Include="imagenes\icondUpdate24.png" />
+    <Content Include="imagenes\iconAdd24.png" />
+    <Content Include="imagenes\iconDelete24.png" />
+    <Content Include="imagenes\iconClean24.png" />
     <Content Include="imagenes\iconUsuario32.png" />
     <Content Include="imagenes\Logo DePrisa %281%29.png" />
     <Content Include="imagenes\Logo DePrisa.svg" />

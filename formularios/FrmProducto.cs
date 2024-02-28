@@ -30,7 +30,7 @@ namespace POS_DePrisa.formularios
 
         private void btnGuardarProducto_Click(object sender, EventArgs e)
         {
-            showForm(new FrmGuardarProducto());
+            showForm(new FrmPrueba());
         }
     }
 }

@@ -83,6 +83,16 @@ namespace POS_DePrisa.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap iconAdd24 {
+            get {
+                object obj = ResourceManager.GetObject("iconAdd24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap iconAdd28 {
             get {
                 object obj = ResourceManager.GetObject("iconAdd28", resourceCulture);
@@ -123,6 +133,16 @@ namespace POS_DePrisa.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap iconClean24 {
+            get {
+                object obj = ResourceManager.GetObject("iconClean24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap iconClose32 {
             get {
                 object obj = ResourceManager.GetObject("iconClose32", resourceCulture);
@@ -136,6 +156,26 @@ namespace POS_DePrisa.Properties {
         internal static System.Drawing.Bitmap iconConfiguracion32 {
             get {
                 object obj = ResourceManager.GetObject("iconConfiguracion32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconDelete24 {
+            get {
+                object obj = ResourceManager.GetObject("iconDelete24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icondUpdate24 {
+            get {
+                object obj = ResourceManager.GetObject("icondUpdate24", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
