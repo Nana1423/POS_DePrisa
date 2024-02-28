@@ -1,6 +1,6 @@
 ﻿namespace POS_DePrisa.formularios.Producto
 {
-    partial class FrmGuardarProducto
+    partial class FrmPrueba
     {
         /// <summary>
         /// Required designer variable.
@@ -28,9 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.dgvListaProductoPrincipal = new System.Windows.Forms.DataGridView();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tpProducto = new System.Windows.Forms.TabPage();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.rbKitSi = new System.Windows.Forms.RadioButton();
             this.rbKitNo = new System.Windows.Forms.RadioButton();
             this.txtDescuento = new System.Windows.Forms.TextBox();
@@ -57,45 +62,94 @@
             this.txtBuscarProducto = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.dgvListaProductos = new System.Windows.Forms.DataGridView();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label10 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.dgvListaProductoPrincipal = new System.Windows.Forms.DataGridView();
-            this.roundedButton3 = new POS_DePrisa.customControls.RoundedButton();
-            this.roundedButton2 = new POS_DePrisa.customControls.RoundedButton();
-            this.roundedButton1 = new POS_DePrisa.customControls.RoundedButton();
+            this.btnGuardar = new POS_DePrisa.customControls.RoundedButton();
+            this.btnEliminar = new POS_DePrisa.customControls.RoundedButton();
+            this.btnActualizar = new POS_DePrisa.customControls.RoundedButton();
             this.btnGuardarProducto = new POS_DePrisa.customControls.RoundedButton();
             this.btnAgregar = new POS_DePrisa.customControls.RoundedButton();
             this.btnQuitar = new POS_DePrisa.customControls.RoundedButton();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListaProductoPrincipal)).BeginInit();
+            this.panel2.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tpProducto.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaKit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaProductos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvListaProductoPrincipal)).BeginInit();
             this.SuspendLayout();
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.dgvListaProductoPrincipal);
+            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.label10);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(457, 508);
+            this.panel1.TabIndex = 0;
+            // 
+            // dgvListaProductoPrincipal
+            // 
+            this.dgvListaProductoPrincipal.AllowUserToAddRows = false;
+            this.dgvListaProductoPrincipal.AllowUserToDeleteRows = false;
+            this.dgvListaProductoPrincipal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvListaProductoPrincipal.Location = new System.Drawing.Point(12, 80);
+            this.dgvListaProductoPrincipal.MultiSelect = false;
+            this.dgvListaProductoPrincipal.Name = "dgvListaProductoPrincipal";
+            this.dgvListaProductoPrincipal.ReadOnly = true;
+            this.dgvListaProductoPrincipal.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvListaProductoPrincipal.Size = new System.Drawing.Size(424, 306);
+            this.dgvListaProductoPrincipal.TabIndex = 15;
+            this.dgvListaProductoPrincipal.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListaProductoPrincipal_CellContentClick);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(12, 39);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(306, 20);
+            this.textBox1.TabIndex = 14;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(9, 15);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(106, 16);
+            this.label10.TabIndex = 13;
+            this.label10.Text = "Buscar Producto";
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.tabControl1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(457, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(864, 508);
+            this.panel2.TabIndex = 1;
             // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tpProducto);
             this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.tabControl1.Location = new System.Drawing.Point(0, 10);
+            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(772, 484);
-            this.tabControl1.TabIndex = 1;
+            this.tabControl1.Size = new System.Drawing.Size(864, 508);
+            this.tabControl1.TabIndex = 2;
             this.tabControl1.Tag = "Producto";
             this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
             // tpProducto
             // 
             this.tpProducto.BackColor = System.Drawing.Color.Transparent;
-            this.tpProducto.Controls.Add(this.roundedButton3);
-            this.tpProducto.Controls.Add(this.roundedButton2);
-            this.tpProducto.Controls.Add(this.roundedButton1);
-            this.tpProducto.Controls.Add(this.panel2);
+            this.tpProducto.Controls.Add(this.btnGuardar);
+            this.tpProducto.Controls.Add(this.btnEliminar);
+            this.tpProducto.Controls.Add(this.btnActualizar);
+            this.tpProducto.Controls.Add(this.panel3);
             this.tpProducto.Controls.Add(this.btnGuardarProducto);
             this.tpProducto.Controls.Add(this.txtDescuento);
             this.tpProducto.Controls.Add(this.txtPrecio);
@@ -119,18 +173,18 @@
             this.tpProducto.Location = new System.Drawing.Point(4, 22);
             this.tpProducto.Name = "tpProducto";
             this.tpProducto.Padding = new System.Windows.Forms.Padding(3);
-            this.tpProducto.Size = new System.Drawing.Size(764, 458);
+            this.tpProducto.Size = new System.Drawing.Size(856, 482);
             this.tpProducto.TabIndex = 1;
             this.tpProducto.Text = "Nuevo producto";
             // 
-            // panel2
+            // panel3
             // 
-            this.panel2.Controls.Add(this.rbKitSi);
-            this.panel2.Controls.Add(this.rbKitNo);
-            this.panel2.Location = new System.Drawing.Point(131, 263);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(131, 32);
-            this.panel2.TabIndex = 22;
+            this.panel3.Controls.Add(this.rbKitSi);
+            this.panel3.Controls.Add(this.rbKitNo);
+            this.panel3.Location = new System.Drawing.Point(131, 263);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(131, 32);
+            this.panel3.TabIndex = 22;
             // 
             // rbKitSi
             // 
@@ -140,14 +194,14 @@
             this.rbKitSi.Name = "rbKitSi";
             this.rbKitSi.Size = new System.Drawing.Size(38, 21);
             this.rbKitSi.TabIndex = 6;
-            this.rbKitSi.TabStop = true;
             this.rbKitSi.Text = "SI";
             this.rbKitSi.UseVisualStyleBackColor = true;
-            this.rbKitSi.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
+            this.rbKitSi.CheckedChanged += new System.EventHandler(this.rbKitSi_CheckedChanged);
             // 
             // rbKitNo
             // 
             this.rbKitNo.AutoSize = true;
+            this.rbKitNo.Checked = true;
             this.rbKitNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbKitNo.Location = new System.Drawing.Point(1, 8);
             this.rbKitNo.Name = "rbKitNo";
@@ -156,7 +210,7 @@
             this.rbKitNo.TabStop = true;
             this.rbKitNo.Text = "NO";
             this.rbKitNo.UseVisualStyleBackColor = true;
-            this.rbKitNo.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            this.rbKitNo.CheckedChanged += new System.EventHandler(this.rbKitNo_CheckedChanged);
             // 
             // txtDescuento
             // 
@@ -212,24 +266,24 @@
             // rbIvaSi
             // 
             this.rbIvaSi.AutoSize = true;
+            this.rbIvaSi.Checked = true;
             this.rbIvaSi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbIvaSi.Location = new System.Drawing.Point(184, 301);
             this.rbIvaSi.Name = "rbIvaSi";
             this.rbIvaSi.Size = new System.Drawing.Size(38, 21);
             this.rbIvaSi.TabIndex = 13;
+            this.rbIvaSi.TabStop = true;
             this.rbIvaSi.Text = "SI";
             this.rbIvaSi.UseVisualStyleBackColor = true;
             // 
             // rbIvaNo
             // 
             this.rbIvaNo.AutoSize = true;
-            this.rbIvaNo.Checked = true;
             this.rbIvaNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbIvaNo.Location = new System.Drawing.Point(131, 301);
             this.rbIvaNo.Name = "rbIvaNo";
             this.rbIvaNo.Size = new System.Drawing.Size(47, 21);
             this.rbIvaNo.TabIndex = 12;
-            this.rbIvaNo.TabStop = true;
             this.rbIvaNo.Text = "NO";
             this.rbIvaNo.UseVisualStyleBackColor = true;
             // 
@@ -336,7 +390,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(764, 458);
+            this.tabPage1.Size = new System.Drawing.Size(856, 482);
             this.tabPage1.TabIndex = 2;
             this.tabPage1.Text = "Detalles Kit";
             // 
@@ -352,7 +406,6 @@
             this.dgvListaKit.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvListaKit.Size = new System.Drawing.Size(306, 306);
             this.dgvListaKit.TabIndex = 12;
-            this.dgvListaKit.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListaKit_CellContentClick);
             // 
             // label12
             // 
@@ -395,112 +448,76 @@
             this.dgvListaProductos.TabIndex = 0;
             this.dgvListaProductos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListaProductos_CellContentClick);
             // 
-            // panel1
+            // btnGuardar
             // 
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1238, 10);
-            this.panel1.TabIndex = 0;
+            this.btnGuardar.AutoSize = true;
+            this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(238)))), ((int)(((byte)(243)))));
+            this.btnGuardar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(238)))), ((int)(((byte)(243)))));
+            this.btnGuardar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnGuardar.BorderRadius = 10;
+            this.btnGuardar.BorderSize = 1;
+            this.btnGuardar.FlatAppearance.BorderSize = 0;
+            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar.ForeColor = System.Drawing.Color.Black;
+            this.btnGuardar.Image = global::POS_DePrisa.Properties.Resources.iconClean24;
+            this.btnGuardar.Location = new System.Drawing.Point(37, 343);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(95, 38);
+            this.btnGuardar.TabIndex = 25;
+            this.btnGuardar.Text = "Limpiar ";
+            this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnGuardar.TextColor = System.Drawing.Color.Black;
+            this.btnGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnGuardar.UseVisualStyleBackColor = false;
             // 
-            // label10
+            // btnEliminar
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(799, 44);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(106, 16);
-            this.label10.TabIndex = 10;
-            this.label10.Text = "Buscar Producto";
+            this.btnEliminar.AutoSize = true;
+            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(238)))), ((int)(((byte)(243)))));
+            this.btnEliminar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(238)))), ((int)(((byte)(243)))));
+            this.btnEliminar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnEliminar.BorderRadius = 10;
+            this.btnEliminar.BorderSize = 1;
+            this.btnEliminar.Enabled = false;
+            this.btnEliminar.FlatAppearance.BorderSize = 0;
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.ForeColor = System.Drawing.Color.Black;
+            this.btnEliminar.Image = global::POS_DePrisa.Properties.Resources.iconDelete24;
+            this.btnEliminar.Location = new System.Drawing.Point(341, 343);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(89, 38);
+            this.btnEliminar.TabIndex = 24;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnEliminar.TextColor = System.Drawing.Color.Black;
+            this.btnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnEliminar.UseVisualStyleBackColor = false;
             // 
-            // textBox1
+            // btnActualizar
             // 
-            this.textBox1.Location = new System.Drawing.Point(802, 68);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(306, 20);
-            this.textBox1.TabIndex = 11;
-            // 
-            // dgvListaProductoPrincipal
-            // 
-            this.dgvListaProductoPrincipal.AllowUserToAddRows = false;
-            this.dgvListaProductoPrincipal.AllowUserToDeleteRows = false;
-            this.dgvListaProductoPrincipal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvListaProductoPrincipal.Location = new System.Drawing.Point(802, 109);
-            this.dgvListaProductoPrincipal.MultiSelect = false;
-            this.dgvListaProductoPrincipal.Name = "dgvListaProductoPrincipal";
-            this.dgvListaProductoPrincipal.ReadOnly = true;
-            this.dgvListaProductoPrincipal.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvListaProductoPrincipal.Size = new System.Drawing.Size(424, 306);
-            this.dgvListaProductoPrincipal.TabIndex = 12;
-            // 
-            // roundedButton3
-            // 
-            this.roundedButton3.AutoSize = true;
-            this.roundedButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(238)))), ((int)(((byte)(243)))));
-            this.roundedButton3.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(238)))), ((int)(((byte)(243)))));
-            this.roundedButton3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.roundedButton3.BorderRadius = 10;
-            this.roundedButton3.BorderSize = 1;
-            this.roundedButton3.FlatAppearance.BorderSize = 0;
-            this.roundedButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundedButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundedButton3.ForeColor = System.Drawing.Color.Black;
-            this.roundedButton3.Image = global::POS_DePrisa.Properties.Resources.iconClean24;
-            this.roundedButton3.Location = new System.Drawing.Point(37, 343);
-            this.roundedButton3.Name = "roundedButton3";
-            this.roundedButton3.Size = new System.Drawing.Size(95, 38);
-            this.roundedButton3.TabIndex = 25;
-            this.roundedButton3.Text = "Limpiar ";
-            this.roundedButton3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.roundedButton3.TextColor = System.Drawing.Color.Black;
-            this.roundedButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.roundedButton3.UseVisualStyleBackColor = false;
-            // 
-            // roundedButton2
-            // 
-            this.roundedButton2.AutoSize = true;
-            this.roundedButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(238)))), ((int)(((byte)(243)))));
-            this.roundedButton2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(238)))), ((int)(((byte)(243)))));
-            this.roundedButton2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.roundedButton2.BorderRadius = 10;
-            this.roundedButton2.BorderSize = 1;
-            this.roundedButton2.FlatAppearance.BorderSize = 0;
-            this.roundedButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundedButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundedButton2.ForeColor = System.Drawing.Color.Black;
-            this.roundedButton2.Image = global::POS_DePrisa.Properties.Resources.iconDelete24;
-            this.roundedButton2.Location = new System.Drawing.Point(341, 343);
-            this.roundedButton2.Name = "roundedButton2";
-            this.roundedButton2.Size = new System.Drawing.Size(89, 38);
-            this.roundedButton2.TabIndex = 24;
-            this.roundedButton2.Text = "Eliminar";
-            this.roundedButton2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.roundedButton2.TextColor = System.Drawing.Color.Black;
-            this.roundedButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.roundedButton2.UseVisualStyleBackColor = false;
-            // 
-            // roundedButton1
-            // 
-            this.roundedButton1.AutoSize = true;
-            this.roundedButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(238)))), ((int)(((byte)(243)))));
-            this.roundedButton1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(238)))), ((int)(((byte)(243)))));
-            this.roundedButton1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.roundedButton1.BorderRadius = 10;
-            this.roundedButton1.BorderSize = 1;
-            this.roundedButton1.FlatAppearance.BorderSize = 0;
-            this.roundedButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundedButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundedButton1.ForeColor = System.Drawing.Color.Black;
-            this.roundedButton1.Image = global::POS_DePrisa.Properties.Resources.icondUpdate24;
-            this.roundedButton1.Location = new System.Drawing.Point(234, 343);
-            this.roundedButton1.Name = "roundedButton1";
-            this.roundedButton1.Size = new System.Drawing.Size(101, 38);
-            this.roundedButton1.TabIndex = 23;
-            this.roundedButton1.Text = "Actualizar";
-            this.roundedButton1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.roundedButton1.TextColor = System.Drawing.Color.Black;
-            this.roundedButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.roundedButton1.UseVisualStyleBackColor = false;
+            this.btnActualizar.AutoSize = true;
+            this.btnActualizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(238)))), ((int)(((byte)(243)))));
+            this.btnActualizar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(238)))), ((int)(((byte)(243)))));
+            this.btnActualizar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnActualizar.BorderRadius = 10;
+            this.btnActualizar.BorderSize = 1;
+            this.btnActualizar.Enabled = false;
+            this.btnActualizar.FlatAppearance.BorderSize = 0;
+            this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnActualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActualizar.ForeColor = System.Drawing.Color.Black;
+            this.btnActualizar.Image = global::POS_DePrisa.Properties.Resources.icondUpdate24;
+            this.btnActualizar.Location = new System.Drawing.Point(234, 343);
+            this.btnActualizar.Name = "btnActualizar";
+            this.btnActualizar.Size = new System.Drawing.Size(101, 38);
+            this.btnActualizar.TabIndex = 23;
+            this.btnActualizar.Text = "Actualizar";
+            this.btnActualizar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnActualizar.TextColor = System.Drawing.Color.Black;
+            this.btnActualizar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnActualizar.UseVisualStyleBackColor = false;
             // 
             // btnGuardarProducto
             // 
@@ -576,48 +593,47 @@
             this.btnQuitar.TextColor = System.Drawing.Color.Black;
             this.btnQuitar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnQuitar.UseVisualStyleBackColor = false;
+            this.btnQuitar.Click += new System.EventHandler(this.btnQuitar_Click);
             // 
-            // FrmGuardarProducto
+            // FrmPrueba
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1238, 494);
-            this.Controls.Add(this.dgvListaProductoPrincipal);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.tabControl1);
+            this.ClientSize = new System.Drawing.Size(1321, 508);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.DoubleBuffered = true;
-            this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "FrmGuardarProducto";
-            this.Text = "FrmGuardarProducto";
-            this.Load += new System.EventHandler(this.FrmGuardarProducto_Load);
+            this.Name = "FrmPrueba";
+            this.Text = "FrmPrueba";
+            this.Load += new System.EventHandler(this.FrmPrueba_Load);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListaProductoPrincipal)).EndInit();
+            this.panel2.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
             this.tpProducto.ResumeLayout(false);
             this.tpProducto.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaKit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaProductos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvListaProductoPrincipal)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
+
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.DataGridView dgvListaProductoPrincipal;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tpProducto;
+        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.RadioButton rbKitSi;
         private System.Windows.Forms.RadioButton rbKitNo;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TextBox txtDescuento;
         private System.Windows.Forms.TextBox txtPrecio;
         private System.Windows.Forms.TextBox txtCantidad;
@@ -632,21 +648,21 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label1;
-        private customControls.RoundedButton btnGuardarProducto;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.DataGridView dgvListaProductos;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.DataGridView dgvListaKit;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox txtBuscarProducto;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.DataGridView dgvListaProductos;
         private customControls.RoundedButton btnAgregar;
         private customControls.RoundedButton btnQuitar;
-        private System.Windows.Forms.DataGridView dgvListaKit;
-        private customControls.RoundedButton roundedButton3;
-        private customControls.RoundedButton roundedButton2;
-        private customControls.RoundedButton roundedButton1;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.DataGridView dgvListaProductoPrincipal;
+        private customControls.RoundedButton btnGuardar;
+        private customControls.RoundedButton btnEliminar;
+        private customControls.RoundedButton btnActualizar;
+        private customControls.RoundedButton btnGuardarProducto;
     }
 }

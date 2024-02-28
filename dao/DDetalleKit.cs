@@ -56,6 +56,34 @@ namespace POS_DePrisa.dao
             return ds;
         }
 
+        public DataSet obtenerPruductosKit(int idProductoKit)
+        {
+            DataSet ds = new DataSet();
+            try
+            {
+                string query = "SELECT * FROM Tbl_DetalleKit D JOIN Tbl_Producto P on D.idProductoIndividual = P.idProducto where D.idProductoKit = @IdProductoKit";
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+                    using (SqlDataAdapter da = new SqlDataAdapter(query, connection))
+                    {
+                        da.SelectCommand.Parameters.AddWithValue("@IdProductoKit", idProductoKit);
+                        if (da != null)
+                        {
+                            da.Fill(ds);
+                        }
+                    }
+                    connection.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                String Error = $"Eror en obtenerPruductosKit()\nTipo: {ex.GetType()}\nDescripción: {ex.Message}";
+                MessageBox.Show(Error, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            return ds;
+        }
+
 
         // Metodo para insertar un nuevo detalle de kit
         public bool GuardarDetalleKit(DetalleKit detalleKit)
@@ -86,6 +114,67 @@ namespace POS_DePrisa.dao
                 String Error = $"Eror en GuardarDetalleKit()\nTipo: {ex.GetType()}\nDescripción: {ex.Message}";
                 MessageBox.Show(Error, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            return resultado;
+        }
+
+        public bool eliminarProductoKit(DetalleKit detalle)
+        {
+            bool resultado = false;
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+                    string query = "DELETE FROM Tbl_DetalleKit WHERE IdProductoKit = @IdProductoKit and IdProductoIndividual = @IdProductoIndividual";
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@IdProductoKit", detalle.IdProductoKit);
+                        command.Parameters.AddWithValue("@IdProductoIndividual", detalle.IdProductoIndividual);
+                        int result = command.ExecuteNonQuery();
+                        if (result > 0)
+                        {
+                            resultado = true;
+                        }
+                    }
+                    connection.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                String Error = $"Eror en eliminarProductoKit()\nTipo: {ex.GetType()}\nDescripción: {ex.Message}";
+                MessageBox.Show(Error, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            return resultado;
+        }
+
+        public bool validarProductoUnico(DetalleKit detalleKit)
+        {
+            bool resultado = false;
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+                    string query = "SELECT * FROM Tbl_DetalleKit WHERE IdProductoKit = @IdProductoKit AND IdProductoIndividual = @IdProductoIndividual";
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@IdProductoKit", detalleKit.IdProductoKit);
+                        command.Parameters.AddWithValue("@IdProductoIndividual", detalleKit.IdProductoIndividual);
+                        SqlDataReader reader = command.ExecuteReader();
+                        if (reader.HasRows)
+                        {
+                            resultado = true;
+                        }
+                    }
+                    connection.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                String Error = $"Eror en validarProductoUnico()\nTipo: {ex.GetType()}\nDescripción: {ex.Message}";
+                MessageBox.Show(Error, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
             return resultado;
         }
     }

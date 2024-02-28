@@ -124,6 +124,9 @@
   <data name="iconAdd16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\imagenes\iconAdd16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="iconAdd24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\imagenes\iconAdd24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="iconAdd28" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\imagenes\iconAdd28.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -136,11 +139,20 @@
   <data name="iconCategoria28" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\imagenes\iconCategoria28.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="iconClean24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\imagenes\iconClean24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="iconClose32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\imagenes\iconClose32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="iconConfiguracion32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\imagenes\iconConfiguracion32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iconDelete24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\imagenes\iconDelete24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icondUpdate24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\imagenes\icondUpdate24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="iconFactura32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\imagenes\iconFactura32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

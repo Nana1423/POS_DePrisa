@@ -97,6 +97,39 @@ namespace POS_DePrisa.dao
             return resultado;   
         }
 
+        public int obtenerIdProducto(string codigoBarra)
+        {
+            int idProducto = 0;
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+                    string query = "SELECT IdProducto FROM Tbl_Producto WHERE CodigoBarra = @CodigoBarra";
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@CodigoBarra", codigoBarra);
+                        SqlDataReader reader = command.ExecuteReader();
+                        if (reader.HasRows)
+                        {
+                            while (reader.Read())
+                            {
+                                idProducto = reader.GetInt32(0);
+                            }
+                        }
+                    }
+                    connection.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                String Error = $"Eror en obtenerIdProducto()\nTipo: {ex.GetType()}\nDescripción: {ex.Message}";
+                MessageBox.Show(Error, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            return idProducto;
+        }
+
+
         //validar si el codigo de barra ya existe
         public bool validarCodigoBarra(string codigoBarra)
         {
