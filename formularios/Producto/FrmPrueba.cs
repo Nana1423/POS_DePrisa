@@ -318,7 +318,21 @@ namespace POS_DePrisa.formularios.Producto
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-           
+           //valida que si desea eliminar el producto
+            DialogResult dialogResult = MessageBox.Show("¿Desea eliminar el producto?", "Eliminar", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.No)
+            {
+                return;
+            }
+            ProductoServices productoServices = new ProductoServices();
+            var resultado = productoServices.eliminarProducto(idProductoSelected);
+            if (!resultado.IsExitoso)
+            {
+                MessageBox.Show(resultado.Mensaje);
+                return;
+            }
+            MessageBox.Show(resultado.Mensaje);
+            limpiarCampos();
         }
 
         private void btnQuitar_Click(object sender, EventArgs e)
@@ -402,5 +416,15 @@ namespace POS_DePrisa.formularios.Producto
           
         }
 
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            limpiarCampos();
+        }
+
+        
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

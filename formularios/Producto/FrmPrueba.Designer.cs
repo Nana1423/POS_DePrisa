@@ -35,7 +35,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tpProducto = new System.Windows.Forms.TabPage();
-            this.btnGuardar = new POS_DePrisa.customControls.RoundedButton();
+            this.btnLimpiar = new POS_DePrisa.customControls.RoundedButton();
             this.btnEliminar = new POS_DePrisa.customControls.RoundedButton();
             this.btnActualizar = new POS_DePrisa.customControls.RoundedButton();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -146,7 +146,7 @@
             // tpProducto
             // 
             this.tpProducto.BackColor = System.Drawing.Color.Transparent;
-            this.tpProducto.Controls.Add(this.btnGuardar);
+            this.tpProducto.Controls.Add(this.btnLimpiar);
             this.tpProducto.Controls.Add(this.btnEliminar);
             this.tpProducto.Controls.Add(this.btnActualizar);
             this.tpProducto.Controls.Add(this.panel3);
@@ -177,28 +177,29 @@
             this.tpProducto.TabIndex = 1;
             this.tpProducto.Text = "Nuevo producto";
             // 
-            // btnGuardar
+            // btnLimpiar
             // 
-            this.btnGuardar.AutoSize = true;
-            this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(238)))), ((int)(((byte)(243)))));
-            this.btnGuardar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(238)))), ((int)(((byte)(243)))));
-            this.btnGuardar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnGuardar.BorderRadius = 10;
-            this.btnGuardar.BorderSize = 1;
-            this.btnGuardar.FlatAppearance.BorderSize = 0;
-            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardar.ForeColor = System.Drawing.Color.Black;
-            this.btnGuardar.Image = global::POS_DePrisa.Properties.Resources.iconClean24;
-            this.btnGuardar.Location = new System.Drawing.Point(37, 343);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(95, 38);
-            this.btnGuardar.TabIndex = 25;
-            this.btnGuardar.Text = "Limpiar ";
-            this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnGuardar.TextColor = System.Drawing.Color.Black;
-            this.btnGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnLimpiar.AutoSize = true;
+            this.btnLimpiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(238)))), ((int)(((byte)(243)))));
+            this.btnLimpiar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(238)))), ((int)(((byte)(243)))));
+            this.btnLimpiar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnLimpiar.BorderRadius = 10;
+            this.btnLimpiar.BorderSize = 1;
+            this.btnLimpiar.FlatAppearance.BorderSize = 0;
+            this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpiar.ForeColor = System.Drawing.Color.Black;
+            this.btnLimpiar.Image = global::POS_DePrisa.Properties.Resources.iconClean24;
+            this.btnLimpiar.Location = new System.Drawing.Point(37, 343);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(95, 38);
+            this.btnLimpiar.TabIndex = 25;
+            this.btnLimpiar.Text = "Limpiar ";
+            this.btnLimpiar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnLimpiar.TextColor = System.Drawing.Color.Black;
+            this.btnLimpiar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnLimpiar.UseVisualStyleBackColor = false;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
             // btnEliminar
             // 
@@ -247,6 +248,7 @@
             this.btnActualizar.TextColor = System.Drawing.Color.Black;
             this.btnActualizar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnActualizar.UseVisualStyleBackColor = false;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // panel3
             // 
@@ -661,7 +663,7 @@
         private System.Windows.Forms.DataGridView dgvListaProductos;
         private customControls.RoundedButton btnAgregar;
         private customControls.RoundedButton btnQuitar;
-        private customControls.RoundedButton btnGuardar;
+        private customControls.RoundedButton btnLimpiar;
         private customControls.RoundedButton btnEliminar;
         private customControls.RoundedButton btnActualizar;
         private customControls.RoundedButton btnGuardarProducto;
