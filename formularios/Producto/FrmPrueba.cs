@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.InteropServices;
 
 namespace POS_DePrisa.formularios.Producto
 {
@@ -21,46 +22,57 @@ namespace POS_DePrisa.formularios.Producto
         public FrmPrueba()
         {
             InitializeComponent();
+            
+
         }
 
-        private void FrmPrueba_Load(object sender, EventArgs e)
+        private async void FrmPrueba_Load(object sender, EventArgs e)
         {
-            idProductoSelected = -1;
+            idProductoSelected = -1; //Nos servira para validar si el usuario ya esta creado antes de entrar a detalles kit
             modoEdicion = false;
-            cargarListaProductos(dgvListaProductoPrincipal);
             guardarTabPage();
             eliminarTabPage();
-            cargarComboBox();
+            await CargarListaProductoAsync(dgvListaProductoPrincipal);
+            await CargarComboAsync();
+
         }
 
-      
-        private void cargarComboBox()
+        private async Task CargarComboAsync()
         {
-            ProductoServices productoServices = new ProductoServices();
-            var categorias = productoServices.listarCategorias();
-            cbxCategoria.DataSource = categorias.Tables[0];
-            cbxCategoria.DisplayMember = "Nombre";
-            cbxCategoria.ValueMember = "IdCategoria";
-            cbxCategoria.SelectedIndex = -1;
+            await Task.Run(() =>
+            {
+                ProductoServices productoServices = new ProductoServices();
+                var categorias = productoServices.listarCategorias();
+
+                // Actualizar el ComboBox en el hilo de la interfaz de usuario
+                this.Invoke((MethodInvoker)delegate
+                {
+                    cbxCategoria.DataSource = categorias.Tables[0];
+                    cbxCategoria.DisplayMember = "Nombre";
+                    cbxCategoria.ValueMember = "IdCategoria";
+                    cbxCategoria.SelectedIndex = -1;
+                });
+            });
         }
 
-        private void guardarTabPage()
+        private async Task CargarListaProductoAsync(DataGridView dg)
         {
-            detalleKit = tabControl1.TabPages[1];
+            await Task.Run(() =>
+            {
+                ProductoServices services = new ProductoServices();
+                var productos = services.listarProductos();
+
+                this.Invoke((MethodInvoker)delegate
+                {
+                    dg.DataSource = productos.Tables[0];
+                    OcultarMostrarColumnas(dg);
+                    CambiarNombresColumnas(dg);
+                });
+            });
         }
 
-        private void eliminarTabPage()
+        private void OcultarMostrarColumnas(DataGridView dg)
         {
-            tabControl1.TabPages.Remove(tabPage1);
-        }
-
-        private void cargarListaProductos(DataGridView dg)
-        {
-            ProductoServices services = new ProductoServices();
-            var productos = services.listarProductos();
-            dg.DataSource = productos.Tables[0];
-
-            //ocultas las columnas que no se necesitan y ocupa el nombre de la columna para ocultarla
             dg.Columns["IdProducto"].Visible = false;
             dg.Columns["IdCategoria"].Visible = false;
             dg.Columns["TieneKit"].Visible = false;
@@ -72,7 +84,10 @@ namespace POS_DePrisa.formularios.Producto
             dg.Columns["CodigoBarra"].Visible = false;
             dg.Columns["Nombre"].Visible = true;
             dg.Columns["estado"].Visible = false;
-            //cambia el nombre de las columnas
+        }
+
+        private void CambiarNombresColumnas(DataGridView dg)
+        {
             dg.Columns["Nombre"].HeaderText = "Nombre";
             dg.Columns["CodigoBarra"].HeaderText = "Codigo de Barra";
             dg.Columns["Descripcion"].HeaderText = "Descripcion";
@@ -81,35 +96,33 @@ namespace POS_DePrisa.formularios.Producto
             dg.Columns["DescuentoMaximo"].HeaderText = "Descuento Maximo";
             dg.Columns["TieneKit"].HeaderText = "Tiene Kit";
             dg.Columns["TieneIva"].HeaderText = "Tiene Iva";
-
         }
 
-      
 
-        private void roundedButton4_Click(object sender, EventArgs e)
+        private void guardarTabPage()
         {
-            //muevete al tabPage de nuevo producto
-            tabControl1.SelectedIndex = 1;
-
+            detalleKit = tabControl1.TabPages[1];
         }
 
-   
+        private void eliminarTabPage()
+        {
+            tabControl1.TabPages.Remove(tabPage1);
+        }
+
 
         private bool validarProductoKit()
         {
             bool resultado = false;
-
 
             if (dgvListaKit.RowCount > 0)
             {
                 resultado = true;
             }
 
-
             return resultado;
         }
 
-        private void btnGuardarProducto_Click(object sender, EventArgs e)
+        private async void btnGuardarProducto_Click(object sender, EventArgs e)
         {
             if (!validarCampos())
             {
@@ -117,6 +130,12 @@ namespace POS_DePrisa.formularios.Producto
             }
 
             ProductoServices productoServices = new ProductoServices();
+
+            // Este codigo simplemente se realiza para obtener una instancia de la clase producto.
+            // El visual studio no me permite crear una instancia de la clase por que lo confunde con un namespace
+            // para confirmar quita la siguiente comillas
+             //Producto producto1 = new Producto();
+
             var produ = productoServices.obtenerProducto();
 
             try
@@ -168,10 +187,15 @@ namespace POS_DePrisa.formularios.Producto
             {
                 //Nos va a servir para poder obtener el id del producto que acabamos de guardar y o vamos a utilizar para guardar el detalle del kit
                 idProductoSelected = productoServices.obtenerIdProducto(produ.CodigoBarra);
+
                 MessageBox.Show("Agrega los productos del kit");
                 //cambia al tabPage de detalle del kit
                 tabControl1.TabPages.Add(detalleKit);
                 tabControl1.SelectedIndex = 2;
+                await CargarListaProductoAsync(dgvListaKit);
+                await CargarListaProductoAsync(dgvListaProductos);
+
+                //se corta la ejecucion del metodo por que si se limpian los campos se genera un checkedChange y oculta la tabPage
                 return;
             }
           
@@ -313,7 +337,7 @@ namespace POS_DePrisa.formularios.Producto
             cargarProductosKit();
         }
 
-        private void dgvListaProductoPrincipal_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private async void dgvListaProductoPrincipal_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             //valida que sea en filas validas
             if (e.RowIndex < 0)
@@ -350,6 +374,7 @@ namespace POS_DePrisa.formularios.Producto
             }
             if (rbKitSi.Checked == true)
             {
+                await CargarListaProductoAsync(dgvListaProductos);
                 cargarProductosKit();
             }
 
@@ -362,8 +387,8 @@ namespace POS_DePrisa.formularios.Producto
 
         private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            cargarListaProductos(dgvListaProductos);
-            cargarProductosKit();
+            //cargarListaProductos(dgvListaProductos);
+            //cargarProductosKit();
         }
 
         private void dgvListaProductos_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -376,5 +401,6 @@ namespace POS_DePrisa.formularios.Producto
            btnAgregar.Enabled = true;
           
         }
+
     }
 }
