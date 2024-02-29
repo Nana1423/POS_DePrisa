@@ -125,6 +125,12 @@
     <Compile Include="formularios\Producto\FrmCantidadDetalleKit.Designer.cs">
       <DependentUpon>FrmCantidadDetalleKit.cs</DependentUpon>
     </Compile>
+    <Compile Include="formularios\Producto\FrmCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\Producto\FrmCategoria.Designer.cs">
+      <DependentUpon>FrmCategoria.cs</DependentUpon>
+    </Compile>
     <Compile Include="formularios\Producto\FrmGuardarProducto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -137,6 +143,7 @@
     <Compile Include="formularios\Producto\FrmPrueba.Designer.cs">
       <DependentUpon>FrmPrueba.cs</DependentUpon>
     </Compile>
+    <Compile Include="negocios\CategoriaServices.cs" />
     <Compile Include="negocios\ProductoServices.cs" />
     <Compile Include="negocios\ResultadoOperacion.cs" />
     <Compile Include="Program.cs" />
@@ -164,6 +171,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="formularios\Producto\FrmCantidadDetalleKit.resx">
       <DependentUpon>FrmCantidadDetalleKit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\Producto\FrmCategoria.resx">
+      <DependentUpon>FrmCategoria.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formularios\Producto\FrmGuardarProducto.resx">
       <DependentUpon>FrmGuardarProducto.cs</DependentUpon>

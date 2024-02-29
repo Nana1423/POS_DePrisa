@@ -53,14 +53,14 @@ namespace POS_DePrisa.formularios
             if (estado == 1)
             {
                 roundedButton1.Visible = false;
-                roundedButton2.Visible = false;
+                btnCategoria.Visible = false;
                 btnOcultar.Visible = false;
                 toolStrip2.Visible = true;
             }
             else
             {
                 roundedButton1.Visible = true;
-                roundedButton2.Visible = true;
+                btnCategoria.Visible = true;
                 btnOcultar.Visible = true;
                 toolStrip2.Visible = false;
             }
@@ -89,6 +89,11 @@ namespace POS_DePrisa.formularios
         {
             showForm(new FrmGuardarProducto());
 
+        }
+
+        private void btnCategoria_Click(object sender, EventArgs e)
+        {
+            showForm(new FrmCategoria());
         }
     }
 
