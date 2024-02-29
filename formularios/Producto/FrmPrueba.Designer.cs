@@ -35,9 +35,13 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tpProducto = new System.Windows.Forms.TabPage();
+            this.btnLimpiar = new POS_DePrisa.customControls.RoundedButton();
+            this.btnEliminar = new POS_DePrisa.customControls.RoundedButton();
+            this.btnActualizar = new POS_DePrisa.customControls.RoundedButton();
             this.panel3 = new System.Windows.Forms.Panel();
             this.rbKitSi = new System.Windows.Forms.RadioButton();
             this.rbKitNo = new System.Windows.Forms.RadioButton();
+            this.btnGuardarProducto = new POS_DePrisa.customControls.RoundedButton();
             this.txtDescuento = new System.Windows.Forms.TextBox();
             this.txtPrecio = new System.Windows.Forms.TextBox();
             this.txtCantidad = new System.Windows.Forms.TextBox();
@@ -62,10 +66,6 @@
             this.txtBuscarProducto = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.dgvListaProductos = new System.Windows.Forms.DataGridView();
-            this.btnGuardar = new POS_DePrisa.customControls.RoundedButton();
-            this.btnEliminar = new POS_DePrisa.customControls.RoundedButton();
-            this.btnActualizar = new POS_DePrisa.customControls.RoundedButton();
-            this.btnGuardarProducto = new POS_DePrisa.customControls.RoundedButton();
             this.btnAgregar = new POS_DePrisa.customControls.RoundedButton();
             this.btnQuitar = new POS_DePrisa.customControls.RoundedButton();
             this.panel1.SuspendLayout();
@@ -146,7 +146,7 @@
             // tpProducto
             // 
             this.tpProducto.BackColor = System.Drawing.Color.Transparent;
-            this.tpProducto.Controls.Add(this.btnGuardar);
+            this.tpProducto.Controls.Add(this.btnLimpiar);
             this.tpProducto.Controls.Add(this.btnEliminar);
             this.tpProducto.Controls.Add(this.btnActualizar);
             this.tpProducto.Controls.Add(this.panel3);
@@ -176,6 +176,79 @@
             this.tpProducto.Size = new System.Drawing.Size(856, 482);
             this.tpProducto.TabIndex = 1;
             this.tpProducto.Text = "Nuevo producto";
+            // 
+            // btnLimpiar
+            // 
+            this.btnLimpiar.AutoSize = true;
+            this.btnLimpiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(238)))), ((int)(((byte)(243)))));
+            this.btnLimpiar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(238)))), ((int)(((byte)(243)))));
+            this.btnLimpiar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnLimpiar.BorderRadius = 10;
+            this.btnLimpiar.BorderSize = 1;
+            this.btnLimpiar.FlatAppearance.BorderSize = 0;
+            this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpiar.ForeColor = System.Drawing.Color.Black;
+            this.btnLimpiar.Image = global::POS_DePrisa.Properties.Resources.iconClean24;
+            this.btnLimpiar.Location = new System.Drawing.Point(37, 343);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(95, 38);
+            this.btnLimpiar.TabIndex = 25;
+            this.btnLimpiar.Text = "Limpiar ";
+            this.btnLimpiar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnLimpiar.TextColor = System.Drawing.Color.Black;
+            this.btnLimpiar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnLimpiar.UseVisualStyleBackColor = false;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.AutoSize = true;
+            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(238)))), ((int)(((byte)(243)))));
+            this.btnEliminar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(238)))), ((int)(((byte)(243)))));
+            this.btnEliminar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnEliminar.BorderRadius = 10;
+            this.btnEliminar.BorderSize = 1;
+            this.btnEliminar.Enabled = false;
+            this.btnEliminar.FlatAppearance.BorderSize = 0;
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.ForeColor = System.Drawing.Color.Black;
+            this.btnEliminar.Image = global::POS_DePrisa.Properties.Resources.iconDelete24;
+            this.btnEliminar.Location = new System.Drawing.Point(341, 343);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(89, 38);
+            this.btnEliminar.TabIndex = 24;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnEliminar.TextColor = System.Drawing.Color.Black;
+            this.btnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnEliminar.UseVisualStyleBackColor = false;
+            // 
+            // btnActualizar
+            // 
+            this.btnActualizar.AutoSize = true;
+            this.btnActualizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(238)))), ((int)(((byte)(243)))));
+            this.btnActualizar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(238)))), ((int)(((byte)(243)))));
+            this.btnActualizar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnActualizar.BorderRadius = 10;
+            this.btnActualizar.BorderSize = 1;
+            this.btnActualizar.Enabled = false;
+            this.btnActualizar.FlatAppearance.BorderSize = 0;
+            this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnActualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActualizar.ForeColor = System.Drawing.Color.Black;
+            this.btnActualizar.Image = global::POS_DePrisa.Properties.Resources.icondUpdate24;
+            this.btnActualizar.Location = new System.Drawing.Point(234, 343);
+            this.btnActualizar.Name = "btnActualizar";
+            this.btnActualizar.Size = new System.Drawing.Size(101, 38);
+            this.btnActualizar.TabIndex = 23;
+            this.btnActualizar.Text = "Actualizar";
+            this.btnActualizar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnActualizar.TextColor = System.Drawing.Color.Black;
+            this.btnActualizar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnActualizar.UseVisualStyleBackColor = false;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // panel3
             // 
@@ -211,6 +284,30 @@
             this.rbKitNo.Text = "NO";
             this.rbKitNo.UseVisualStyleBackColor = true;
             this.rbKitNo.CheckedChanged += new System.EventHandler(this.rbKitNo_CheckedChanged);
+            // 
+            // btnGuardarProducto
+            // 
+            this.btnGuardarProducto.AutoSize = true;
+            this.btnGuardarProducto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(238)))), ((int)(((byte)(243)))));
+            this.btnGuardarProducto.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(238)))), ((int)(((byte)(243)))));
+            this.btnGuardarProducto.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnGuardarProducto.BorderRadius = 10;
+            this.btnGuardarProducto.BorderSize = 1;
+            this.btnGuardarProducto.FlatAppearance.BorderSize = 0;
+            this.btnGuardarProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardarProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardarProducto.ForeColor = System.Drawing.Color.Black;
+            this.btnGuardarProducto.Image = global::POS_DePrisa.Properties.Resources.iconAdd24;
+            this.btnGuardarProducto.Location = new System.Drawing.Point(138, 343);
+            this.btnGuardarProducto.Name = "btnGuardarProducto";
+            this.btnGuardarProducto.Size = new System.Drawing.Size(90, 38);
+            this.btnGuardarProducto.TabIndex = 21;
+            this.btnGuardarProducto.Text = "Guardar";
+            this.btnGuardarProducto.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnGuardarProducto.TextColor = System.Drawing.Color.Black;
+            this.btnGuardarProducto.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnGuardarProducto.UseVisualStyleBackColor = false;
+            this.btnGuardarProducto.Click += new System.EventHandler(this.btnGuardarProducto_Click);
             // 
             // txtDescuento
             // 
@@ -448,101 +545,6 @@
             this.dgvListaProductos.TabIndex = 0;
             this.dgvListaProductos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListaProductos_CellContentClick);
             // 
-            // btnGuardar
-            // 
-            this.btnGuardar.AutoSize = true;
-            this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(238)))), ((int)(((byte)(243)))));
-            this.btnGuardar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(238)))), ((int)(((byte)(243)))));
-            this.btnGuardar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnGuardar.BorderRadius = 10;
-            this.btnGuardar.BorderSize = 1;
-            this.btnGuardar.FlatAppearance.BorderSize = 0;
-            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardar.ForeColor = System.Drawing.Color.Black;
-            this.btnGuardar.Image = global::POS_DePrisa.Properties.Resources.iconClean24;
-            this.btnGuardar.Location = new System.Drawing.Point(37, 343);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(95, 38);
-            this.btnGuardar.TabIndex = 25;
-            this.btnGuardar.Text = "Limpiar ";
-            this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnGuardar.TextColor = System.Drawing.Color.Black;
-            this.btnGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnGuardar.UseVisualStyleBackColor = false;
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.AutoSize = true;
-            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(238)))), ((int)(((byte)(243)))));
-            this.btnEliminar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(238)))), ((int)(((byte)(243)))));
-            this.btnEliminar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnEliminar.BorderRadius = 10;
-            this.btnEliminar.BorderSize = 1;
-            this.btnEliminar.Enabled = false;
-            this.btnEliminar.FlatAppearance.BorderSize = 0;
-            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.ForeColor = System.Drawing.Color.Black;
-            this.btnEliminar.Image = global::POS_DePrisa.Properties.Resources.iconDelete24;
-            this.btnEliminar.Location = new System.Drawing.Point(341, 343);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(89, 38);
-            this.btnEliminar.TabIndex = 24;
-            this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnEliminar.TextColor = System.Drawing.Color.Black;
-            this.btnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnEliminar.UseVisualStyleBackColor = false;
-            // 
-            // btnActualizar
-            // 
-            this.btnActualizar.AutoSize = true;
-            this.btnActualizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(238)))), ((int)(((byte)(243)))));
-            this.btnActualizar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(238)))), ((int)(((byte)(243)))));
-            this.btnActualizar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnActualizar.BorderRadius = 10;
-            this.btnActualizar.BorderSize = 1;
-            this.btnActualizar.Enabled = false;
-            this.btnActualizar.FlatAppearance.BorderSize = 0;
-            this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnActualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnActualizar.ForeColor = System.Drawing.Color.Black;
-            this.btnActualizar.Image = global::POS_DePrisa.Properties.Resources.icondUpdate24;
-            this.btnActualizar.Location = new System.Drawing.Point(234, 343);
-            this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(101, 38);
-            this.btnActualizar.TabIndex = 23;
-            this.btnActualizar.Text = "Actualizar";
-            this.btnActualizar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnActualizar.TextColor = System.Drawing.Color.Black;
-            this.btnActualizar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnActualizar.UseVisualStyleBackColor = false;
-            // 
-            // btnGuardarProducto
-            // 
-            this.btnGuardarProducto.AutoSize = true;
-            this.btnGuardarProducto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(238)))), ((int)(((byte)(243)))));
-            this.btnGuardarProducto.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(238)))), ((int)(((byte)(243)))));
-            this.btnGuardarProducto.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnGuardarProducto.BorderRadius = 10;
-            this.btnGuardarProducto.BorderSize = 1;
-            this.btnGuardarProducto.FlatAppearance.BorderSize = 0;
-            this.btnGuardarProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGuardarProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardarProducto.ForeColor = System.Drawing.Color.Black;
-            this.btnGuardarProducto.Image = global::POS_DePrisa.Properties.Resources.iconAdd24;
-            this.btnGuardarProducto.Location = new System.Drawing.Point(138, 343);
-            this.btnGuardarProducto.Name = "btnGuardarProducto";
-            this.btnGuardarProducto.Size = new System.Drawing.Size(90, 38);
-            this.btnGuardarProducto.TabIndex = 21;
-            this.btnGuardarProducto.Text = "Guardar";
-            this.btnGuardarProducto.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnGuardarProducto.TextColor = System.Drawing.Color.Black;
-            this.btnGuardarProducto.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnGuardarProducto.UseVisualStyleBackColor = false;
-            this.btnGuardarProducto.Click += new System.EventHandler(this.btnGuardarProducto_Click);
-            // 
             // btnAgregar
             // 
             this.btnAgregar.AutoSize = true;
@@ -602,6 +604,7 @@
             this.ClientSize = new System.Drawing.Size(1321, 508);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.DoubleBuffered = true;
             this.Name = "FrmPrueba";
             this.Text = "FrmPrueba";
             this.Load += new System.EventHandler(this.FrmPrueba_Load);
@@ -660,7 +663,7 @@
         private System.Windows.Forms.DataGridView dgvListaProductos;
         private customControls.RoundedButton btnAgregar;
         private customControls.RoundedButton btnQuitar;
-        private customControls.RoundedButton btnGuardar;
+        private customControls.RoundedButton btnLimpiar;
         private customControls.RoundedButton btnEliminar;
         private customControls.RoundedButton btnActualizar;
         private customControls.RoundedButton btnGuardarProducto;
