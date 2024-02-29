@@ -85,5 +85,121 @@ namespace POS_DePrisa.dao
             }
             return resultado;
         }
+
+        public bool validarCategoriaUnica(Categoria categoria)
+        {
+            bool resultado = false;
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+                    string query = "SELECT * FROM Tbl_Categoria WHERE Nombre = @Nombre";
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@Nombre", categoria.Nombre);
+                        SqlDataReader reader = command.ExecuteReader();
+                        if (reader.HasRows)
+                        {
+                            resultado = true;
+                        }
+                    }
+                    connection.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                String Error = $"Eror en validarCategoriaUnica()\nTipo: {ex.GetType()}\nDescripción: {ex.Message}";
+                MessageBox.Show(Error, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            return resultado;
+        }
+
+        public bool actualizarCategoria(Categoria categoria)
+        {
+            bool resultado = false;
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+                    string query = "UPDATE Tbl_Categoria SET Nombre = @Nombre WHERE idCategoria = @idCategoria";
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@Nombre", categoria.Nombre);
+                        command.Parameters.AddWithValue("@idCategoria", categoria.IdCategoria);
+                        int result = command.ExecuteNonQuery();
+                        if (result > 0)
+                        {
+                            resultado = true;
+                        }
+                    }
+                    connection.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                String Error = $"Eror en actualizarCategoria()\nTipo: {ex.GetType()}\nDescripción: {ex.Message}";
+                MessageBox.Show(Error, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            return resultado;
+        }
+
+        public bool eliminarCategoria(Categoria categoria)
+        {
+            bool resultado = false;
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+                    string query = "DELETE FROM Tbl_Categoria WHERE idCategoria = @idCategoria";
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@idCategoria", categoria.IdCategoria);
+                        int result = command.ExecuteNonQuery();
+                        if (result > 0)
+                        {
+                            resultado = true;
+                        }
+                    }
+                    connection.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                String Error = $"Eror en eliminarCategoria()\nTipo: {ex.GetType()}\nDescripción: {ex.Message}";
+                MessageBox.Show(Error, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            return resultado;
+        }
+
+        public DataSet buscarCategoria(String nombre)
+        {
+            DataSet ds = new DataSet();
+            try
+            {
+                string query = "SELECT * FROM Tbl_Categoria WHERE Nombre LIKE @Nombre";
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+                    using (SqlDataAdapter da = new SqlDataAdapter(query, connection))
+                    {
+                        da.SelectCommand.Parameters.AddWithValue("@Nombre", "%" + nombre + "%");
+                        if (da != null)
+                        {
+                            da.Fill(ds);
+                        }
+                    }
+                    connection.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                String Error = $"Eror en buscarCategoria()\nTipo: {ex.GetType()}\nDescripción: {ex.Message}";
+                MessageBox.Show(Error, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            return ds;
+        }
     }
 }
