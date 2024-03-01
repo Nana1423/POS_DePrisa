@@ -89,6 +89,29 @@ namespace POS_DePrisa.negocios
             return dCategoria.buscarCategoria(nombre);
         }
 
+        public ResultadoOperacion borrar(Categoria categoria) 
+        { 
+            ResultadoOperacion resultado = new ResultadoOperacion();
+
+            if (categoria is null)
+            {
+                resultado.IsExitoso = false;
+                resultado.Mensaje = "La categoria no puede ser nula";
+                return resultado;
+            }
+
+            if (!dCategoria.eliminarCategoria(categoria))
+            {
+                resultado.IsExitoso = false;
+                resultado.Mensaje = "Error al borrar la categoria";
+                return resultado;
+            }
+
+            resultado.IsExitoso = true;
+            resultado.Mensaje = "Categoria borrada con éxito";
+            return resultado;
+
+        }
 
 
     }

@@ -187,6 +187,21 @@ namespace POS_DePrisa.formularios.Producto
             }
         }
 
-
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            //valida si desea eliminar la categoria
+            if (MessageBox.Show($"¿Estas seguro de eliminar la categoria: {categoriaSelected.Nombre}?", "Eliminar Categoria", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                var resultado = categoriaServices.borrar(categoriaSelected);
+                if (!resultado.IsExitoso)
+                {
+                    MessageBox.Show(resultado.Mensaje);
+                    return;
+                }
+                MessageBox.Show("Categoria eliminada con exito");
+                btnLimpiar_Click(sender, e);
+                cargarListaCategorias();
+            }
+        }
     }
 }
