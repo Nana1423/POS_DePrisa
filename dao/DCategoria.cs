@@ -29,7 +29,7 @@ namespace POS_DePrisa.dao
             DataSet ds = new DataSet();
             try
             {
-                string query = "SELECT * FROM Tbl_Categoria";
+                string query = "SELECT idCategoria,nombre FROM Tbl_Categoria where estado = 1";
 
                 //Se utiliza using para que el objeto se destruya al salir del bloque
                 using (SqlConnection connection = new SqlConnection(connectionString))
@@ -65,7 +65,7 @@ namespace POS_DePrisa.dao
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
-                    string query = "INSERT INTO Tbl_Categoria (Nombre) VALUES (@Nombre)";
+                    string query = "INSERT INTO Tbl_Categoria (Nombre, estado) VALUES (@Nombre, 1)";
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {
                         command.Parameters.AddWithValue("@Nombre", categoria.Nombre);
@@ -94,7 +94,7 @@ namespace POS_DePrisa.dao
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
-                    string query = "SELECT * FROM Tbl_Categoria WHERE Nombre = @Nombre";
+                    string query = "SELECT * FROM Tbl_Categoria WHERE Nombre = @Nombre and estado = 1";
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {
                         command.Parameters.AddWithValue("@Nombre", categoria.Nombre);
@@ -153,7 +153,7 @@ namespace POS_DePrisa.dao
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
-                    string query = "DELETE FROM Tbl_Categoria WHERE idCategoria = @idCategoria";
+                    string query = "Update Tbl_Categoria set Estado = 0 WHERE idCategoria = @idCategoria";
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {
                         command.Parameters.AddWithValue("@idCategoria", categoria.IdCategoria);
@@ -179,7 +179,7 @@ namespace POS_DePrisa.dao
             DataSet ds = new DataSet();
             try
             {
-                string query = "SELECT * FROM Tbl_Categoria WHERE Nombre LIKE @Nombre";
+                string query = "SELECT idCategoria,nombre FROM Tbl_Categoria WHERE Nombre LIKE @Nombre and Estado = 1";
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();

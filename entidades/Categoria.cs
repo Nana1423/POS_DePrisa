@@ -13,6 +13,8 @@ namespace POS_DePrisa.entidades
         public int IdCategoria { get; set; }
         public string Nombre { get; set; }
 
+        public int estado { get; set; }
+
 
         // * Definicion de constructores *
         // Constructor vacio
@@ -21,10 +23,11 @@ namespace POS_DePrisa.entidades
         }
 
         // Constructor con parametros
-        public Categoria(int idCategoria, string nombre)
+        public Categoria(int idCategoria, string nombre, int estado)
         {
             IdCategoria = idCategoria;
             Nombre = nombre;
+            this.estado = estado;
         }
     }
 }

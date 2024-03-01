@@ -35,11 +35,11 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tpCategoria = new System.Windows.Forms.TabPage();
             this.txtCategoria = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.btnLimpiar = new POS_DePrisa.customControls.RoundedButton();
             this.btnEliminar = new POS_DePrisa.customControls.RoundedButton();
             this.btnActualizar = new POS_DePrisa.customControls.RoundedButton();
             this.btnGuardar = new POS_DePrisa.customControls.RoundedButton();
+            this.label6 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaCategorias)).BeginInit();
             this.tabControl1.SuspendLayout();
@@ -53,9 +53,8 @@
             this.panel1.Controls.Add(this.label10);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(375, 532);
+            this.panel1.Size = new System.Drawing.Size(281, 432);
             this.panel1.TabIndex = 1;
             // 
             // dgvListaCategorias
@@ -64,23 +63,21 @@
             this.dgvListaCategorias.AllowUserToDeleteRows = false;
             this.dgvListaCategorias.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvListaCategorias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvListaCategorias.Location = new System.Drawing.Point(16, 98);
-            this.dgvListaCategorias.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvListaCategorias.Location = new System.Drawing.Point(12, 80);
             this.dgvListaCategorias.MultiSelect = false;
             this.dgvListaCategorias.Name = "dgvListaCategorias";
             this.dgvListaCategorias.ReadOnly = true;
             this.dgvListaCategorias.RowHeadersWidth = 51;
             this.dgvListaCategorias.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvListaCategorias.Size = new System.Drawing.Size(307, 377);
+            this.dgvListaCategorias.Size = new System.Drawing.Size(230, 306);
             this.dgvListaCategorias.TabIndex = 15;
             this.dgvListaCategorias.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListaCategorias_CellClick);
             // 
             // txtBuscar
             // 
-            this.txtBuscar.Location = new System.Drawing.Point(16, 48);
-            this.txtBuscar.Margin = new System.Windows.Forms.Padding(4);
+            this.txtBuscar.Location = new System.Drawing.Point(12, 39);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(307, 22);
+            this.txtBuscar.Size = new System.Drawing.Size(231, 20);
             this.txtBuscar.TabIndex = 14;
             this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
@@ -88,10 +85,9 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(12, 18);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Location = new System.Drawing.Point(9, 15);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(137, 20);
+            this.label10.Size = new System.Drawing.Size(109, 16);
             this.label10.TabIndex = 13;
             this.label10.Text = "Buscar categoría";
             // 
@@ -99,11 +95,10 @@
             // 
             this.tabControl1.Controls.Add(this.tpCategoria);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl1.Location = new System.Drawing.Point(375, 0);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(4);
+            this.tabControl1.Location = new System.Drawing.Point(281, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(760, 532);
+            this.tabControl1.Size = new System.Drawing.Size(570, 432);
             this.tabControl1.TabIndex = 3;
             this.tabControl1.Tag = "Producto";
             // 
@@ -117,31 +112,20 @@
             this.tpCategoria.Controls.Add(this.btnGuardar);
             this.tpCategoria.Controls.Add(this.label6);
             this.tpCategoria.ImageKey = "(ninguno)";
-            this.tpCategoria.Location = new System.Drawing.Point(4, 25);
-            this.tpCategoria.Margin = new System.Windows.Forms.Padding(4);
+            this.tpCategoria.Location = new System.Drawing.Point(4, 22);
             this.tpCategoria.Name = "tpCategoria";
-            this.tpCategoria.Padding = new System.Windows.Forms.Padding(4);
-            this.tpCategoria.Size = new System.Drawing.Size(752, 503);
+            this.tpCategoria.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tpCategoria.Size = new System.Drawing.Size(562, 406);
             this.tpCategoria.TabIndex = 1;
             this.tpCategoria.Text = "Nueva categoria";
             // 
             // txtCategoria
             // 
-            this.txtCategoria.Location = new System.Drawing.Point(150, 40);
+            this.txtCategoria.Location = new System.Drawing.Point(112, 32);
+            this.txtCategoria.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtCategoria.Name = "txtCategoria";
-            this.txtCategoria.Size = new System.Drawing.Size(314, 22);
+            this.txtCategoria.Size = new System.Drawing.Size(236, 20);
             this.txtCategoria.TabIndex = 26;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(45, 40);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(88, 22);
-            this.label6.TabIndex = 4;
-            this.label6.Text = "Categoria";
             // 
             // btnLimpiar
             // 
@@ -156,10 +140,9 @@
             this.btnLimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLimpiar.ForeColor = System.Drawing.Color.Black;
             this.btnLimpiar.Image = global::POS_DePrisa.Properties.Resources.iconClean24;
-            this.btnLimpiar.Location = new System.Drawing.Point(49, 116);
-            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnLimpiar.Location = new System.Drawing.Point(37, 94);
             this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(133, 47);
+            this.btnLimpiar.Size = new System.Drawing.Size(100, 38);
             this.btnLimpiar.TabIndex = 25;
             this.btnLimpiar.Text = "Limpiar ";
             this.btnLimpiar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -182,16 +165,16 @@
             this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.ForeColor = System.Drawing.Color.Black;
             this.btnEliminar.Image = global::POS_DePrisa.Properties.Resources.iconDelete24;
-            this.btnEliminar.Location = new System.Drawing.Point(494, 116);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEliminar.Location = new System.Drawing.Point(370, 94);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(133, 47);
+            this.btnEliminar.Size = new System.Drawing.Size(100, 38);
             this.btnEliminar.TabIndex = 24;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEliminar.TextColor = System.Drawing.Color.Black;
             this.btnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnActualizar
             // 
@@ -207,10 +190,9 @@
             this.btnActualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnActualizar.ForeColor = System.Drawing.Color.Black;
             this.btnActualizar.Image = global::POS_DePrisa.Properties.Resources.icondUpdate24;
-            this.btnActualizar.Location = new System.Drawing.Point(334, 116);
-            this.btnActualizar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnActualizar.Location = new System.Drawing.Point(250, 94);
             this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(152, 47);
+            this.btnActualizar.Size = new System.Drawing.Size(114, 38);
             this.btnActualizar.TabIndex = 23;
             this.btnActualizar.Text = "Actualizar";
             this.btnActualizar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -232,10 +214,9 @@
             this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.ForeColor = System.Drawing.Color.Black;
             this.btnGuardar.Image = global::POS_DePrisa.Properties.Resources.iconAdd24;
-            this.btnGuardar.Location = new System.Drawing.Point(190, 116);
-            this.btnGuardar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnGuardar.Location = new System.Drawing.Point(142, 94);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(136, 47);
+            this.btnGuardar.Size = new System.Drawing.Size(102, 38);
             this.btnGuardar.TabIndex = 21;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -244,13 +225,24 @@
             this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(34, 32);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(69, 17);
+            this.label6.TabIndex = 4;
+            this.label6.Text = "Categoria";
+            // 
             // FrmCategoria
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1135, 532);
+            this.ClientSize = new System.Drawing.Size(851, 432);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FrmCategoria";
             this.Text = "FrmCategoria";
             this.Load += new System.EventHandler(this.FrmCategoria_Load);

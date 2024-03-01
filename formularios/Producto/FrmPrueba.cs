@@ -325,14 +325,14 @@ namespace POS_DePrisa.formularios.Producto
                 return;
             }
             ProductoServices productoServices = new ProductoServices();
-            var resultado = productoServices.eliminarProducto(idProductoSelected);
-            if (!resultado.IsExitoso)
-            {
-                MessageBox.Show(resultado.Mensaje);
-                return;
-            }
-            MessageBox.Show(resultado.Mensaje);
-            limpiarCampos();
+            //var resultado = productoServices.eliminarProducto(idProductoSelected);
+            //if (!resultado.IsExitoso)
+            //{
+            //    MessageBox.Show(resultado.Mensaje);
+            //    return;
+            //}
+            //MessageBox.Show(resultado.Mensaje);
+            //limpiarCampos();
         }
 
         private void btnQuitar_Click(object sender, EventArgs e)
