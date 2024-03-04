@@ -1,4 +1,5 @@
-﻿using System;
+﻿using POS_DePrisa.formularios.Usuario;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,21 @@ namespace POS_DePrisa.formularios
         public FrmUsuario()
         {
             InitializeComponent();
+        }
+
+        private void showForm(Form form)
+        {
+            panelShowData.Controls.Clear();
+            form.FormBorderStyle = FormBorderStyle.None;
+            form.TopLevel = false;
+            form.WindowState = FormWindowState.Maximized;
+            panelShowData.Controls.Add(form);
+            form.Show();
+        }
+
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+            showForm(new FrmCrudUsuario());
         }
     }
 }

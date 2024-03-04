@@ -30,7 +30,7 @@ namespace POS_DePrisa.dao
             DataSet ds = new DataSet();
             try
             {
-                string query = "SELECT * FROM Tbl_Usuario";
+                string query = "SELECT * FROM Tbl_Usuario where Estado = 1";
 
                 //Se utiliza using para que el objeto se destruya al salir del bloque
                 using (SqlConnection connection = new SqlConnection(connectionString))
@@ -74,7 +74,7 @@ namespace POS_DePrisa.dao
                         command.Parameters.AddWithValue("@NombreUsuario", usuario.NombreUsuario);
                         command.Parameters.AddWithValue("@Pw", usuario.Pw);
                         command.Parameters.AddWithValue("@FechaCreacion", usuario.FechaCreacion);
-                        command.Parameters.AddWithValue("@Estado", usuario.Estado);
+                        command.Parameters.AddWithValue("@Estado", 1);
                         command.Parameters.AddWithValue("@IdRol", usuario.IdRol);
                         int result = command.ExecuteNonQuery();
                         if (result > 0)
@@ -88,6 +88,65 @@ namespace POS_DePrisa.dao
             catch (Exception ex)
             {
                 String Error = $"Eror en GuardarUsuario()\nTipo: {ex.GetType()}\nDescripción: {ex.Message}";
+                MessageBox.Show(Error, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            return resultado;
+        }
+
+        public bool validarUsuarioUnico(Usuario usuario)
+        {
+            bool resultado = false;
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+                    string query = "SELECT * FROM Tbl_Usuario WHERE NombreUsuario = @NombreUsuario";
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@NombreUsuario", usuario.NombreUsuario);
+                        SqlDataReader reader = command.ExecuteReader();
+                        if (reader.HasRows)
+                        {
+                            resultado = true;
+                        }
+                    }
+                    connection.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                String Error = $"Eror en validarUsuarioUnico()\nTipo: {ex.GetType()}\nDescripción: {ex.Message}";
+                MessageBox.Show(Error, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            return resultado;
+        }
+
+        public bool validarCredenciales(Usuario usuario)
+        {
+            bool resultado = false;
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+                    string query = "SELECT * FROM Tbl_Usuario WHERE NombreUsuario = @NombreUsuario AND Pw = @Pw";
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@NombreUsuario", usuario.NombreUsuario);
+                        command.Parameters.AddWithValue("@Pw", usuario.Pw);
+                        SqlDataReader reader = command.ExecuteReader();
+                        if (reader.HasRows)
+                        {
+                            resultado = true;
+                        }
+                    }
+                    connection.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                String Error = $"Eror en validarCredenciales()\nTipo: {ex.GetType()}\nDescripción: {ex.Message}";
                 MessageBox.Show(Error, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             return resultado;
